@@ -1,0 +1,28 @@
+ Homework Problems
+ 2.55 ◆
+ Compile and run the sample code that uses show_bytes (file show-bytes.c)on
+ different machines to which you have access. Determine the byte orderings used
+ by these machines.
+ 2.56 ◆
+ Try running the code for show_bytes for different sample values.
+ 2.57 ◆
+ Write procedures show_short, show_long, and show_double that print the byte
+ representations of C objects of types short, long, and double, respectively. Try
+ these out on several machines.
+ 2.58 ◆◆
+ Write a procedure is_little_endian that will return 1 when compiled and run
+ on a little-endian machine, and will return 0 when compiled and run on a big
+endian machine. This program should run on any machine, regardless of its word
+ size.
+ 2.59 ◆◆
+ WriteaCexpressionthatwillyieldawordconsistingoftheleastsignificantbyteof
+ xandtheremainingbytesofy.Foroperandsx=0x89ABCDEFandy=0x76543210,
+ this would give 0x765432EF.
+ 2.60 ◆◆
+ Suppose wenumberthebytesinaw-bitwordfrom0(leastsignificant) to w/8−1
+ (most significant). Write code for the following C function, which will return an
+ unsigned value in which byte i of argument x has been replaced by byte b:
+ unsigned replace_byte (unsigned x, int i, unsigned char b);
+ Here are some examples showing how the function should work:
+ replace_byte(0x12345678, 2, 0xAB)--> 0x12AB5678
+ replace_byte(0x12345678, 0, 0xAB)--> 0x123456AB
